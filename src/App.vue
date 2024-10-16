@@ -1,25 +1,27 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Froala from './components/Froala.vue'
+// import Froala from './components/Froala.vue'
+
 export default {
-  components: { Froala },
+  components: {},
 }
 </script>
 
 <template>
-  <header class="bg-red-200">
+  <div class="">
     <img
       alt="Vue logo"
-      class="logo"
+      class="block mx-auto my-8"
       src="./assets/logo.svg"
       width="125"
       height="125"
     />
 
+    <Froala></Froala>
     <!-- <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div> -->
-  </header>
+  </div>
 </template>
 
 <style scoped>

@@ -1,0 +1,19 @@
+@import url("froala-editor/css/froala_editor.pkgd.min.css");
+@import url("froala-editor/css/plugins/table.min.css");
+@import url("froala-editor/css/plugins/image.min.css");
+@import url("froala-editor/css/plugins/code_view.min.css");
+/* @import url();
+@import url();
+@import url();
+@import url();
+@import url();
+@import url(); */
+
+.fr-view table td,
+.fr-view table th {
+  @apply border-neutral-500 border-2;
+}
+.fr-element table td.fr-selected-cell,
+.fr-element table th.fr-selected-cell {
+  @apply border-2;
+}
