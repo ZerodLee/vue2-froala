@@ -1,13 +1,12 @@
-import './style/index.css';
-
-import Froala from './components/Froala.vue'
+import FroalaEditor from './components/Froala.vue'
 import FroalaView from './components/FroalaView.vue'
+import FroalaExtend from './components/froala-extend'
 
-export { Froala, FroalaView }
+export { FroalaEditor, FroalaView, FroalaExtend }
 
 export default {
     install(vue, options) {
-        vue.component('Froala', Froala);
+        vue.component('FroalaEditor', FroalaEditor);
         vue.component('FroalaView', FroalaView);
     }
 }

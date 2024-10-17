@@ -11,10 +11,10 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.js'),
-      name: 'FroalaDesigner',
-      fileName: 'froala-designer',
+      name: 'vue2Froala',
+      fileName: 'vue2-froala',
     },
-    sourcemap: true,  // 启用源映射
+    // sourcemap: true,  // 启用源映射
     // rollupOptions: {
     //     input: ["./src/component/index.js"],
     //     //     output: {
@@ -23,9 +23,9 @@ export default defineConfig({
     //     //     }
     // }
   },
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+  // resolve: {
+  //   alias: {
+  //     '@': fileURLToPath(new URL('./src', import.meta.url))
+  //   }
+  // }
 })

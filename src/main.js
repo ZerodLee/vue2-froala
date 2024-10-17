@@ -1,9 +1,7 @@
-// import { createApp } from 'vue'
-// import App from './App.vue'
+import './style/index.css';
 
-// createApp(App).mount('#app')
 import Vue from 'vue';
-import App from './App.vue';
+import App from './examples/App.vue';
 import froala from './index'
 
 Vue.use(froala);
