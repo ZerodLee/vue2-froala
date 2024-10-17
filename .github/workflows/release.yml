@@ -31,6 +31,11 @@ jobs:
         run: npm run build  # 假设你在 package.json 中定义了 "build" 脚本
 
       # Step 5: 发布到 npm
+      - name: Create .npmrc for authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          cat ~/.npmrc  # 输出内容以检查是否正确创建
+          
       - name: Check npm authentication
         run: echo "NODE_AUTH_TOKEN=${{ secrets.NPM_TOKEN }}"
   
