@@ -19,6 +19,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.20.2'  # 使用 Node.js 16 版本
+          registry-url: 'https://registry.npmjs.org/'
+          auth-token: ${{ secrets.NPM_TOKEN }}
 
       # Step 3: 安装依赖
       - name: Install dependencies
@@ -29,6 +31,9 @@ jobs:
         run: npm run build  # 假设你在 package.json 中定义了 "build" 脚本
 
       # Step 5: 发布到 npm
+      - name: Check npm authentication
+        run: echo "NODE_AUTH_TOKEN=${{ secrets.NPM_TOKEN }}"
+  
       - name: Configure npm to use the correct registry
         run: npm config set registry https://registry.npmjs.org/
   
