@@ -29,6 +29,9 @@ jobs:
         run: npm run build  # 假设你在 package.json 中定义了 "build" 脚本
 
       # Step 5: 发布到 npm
+      - name: Configure npm to use the correct registry
+        run: npm config set registry https://registry.npmjs.org/
+  
       - name: Publish to npm
         run: npm publish
         env:
