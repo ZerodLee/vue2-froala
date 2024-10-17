@@ -1,0 +1,35 @@
+name: Release npm Package
+
+on:
+  push:
+    branches:
+      - main  # 只有在 main 分支有推送时才触发
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: 检出代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: 设置 Node.js 版本
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.20.2'  # 使用 Node.js 16 版本
+
+      # Step 3: 安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: 编译代码
+      - name: Build project
+        run: npm run build  # 假设你在 package.json 中定义了 "build" 脚本
+
+      # Step 5: 发布到 npm
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}  # 使用 GitHub Secrets 存储的 NPM 令牌
