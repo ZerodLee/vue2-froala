@@ -1,6 +1,6 @@
 {
   "name": "vue2-froala",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue2 component for Froala WYSIWYG HTML Rich Text Editor. 适用于vue2版本的Froala富文本（所见即所得）编辑器",
   "author": "https://github.com/ZerodLee",
   "license": "https://froala.com/wysiwyg-editor/terms/",
@@ -10,6 +10,9 @@
   },
   "bugs": {
     "url": "https://github.com/ZerodLee/vue2-froala/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "vue",
@@ -39,7 +42,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "froala-editor": "^4.2.2"
+    "froala-editor": "~4.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
