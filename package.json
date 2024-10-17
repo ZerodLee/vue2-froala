@@ -2,7 +2,35 @@
   "name": "vue2-froala",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "author": "https://github.com/ZerodLee",
+  "license": "https://froala.com/wysiwyg-editor/terms/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZerodLee/vue2-froala.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ZerodLee/vue2-froala/issues"
+  },
+  "keywords": [
+    "vue",
+    "froala",
+    "html",
+    "text",
+    "editor",
+    "wysisyg",
+    "rich editor",
+    "rich text editor",
+    "rte",
+    "javascript"
+  ],
+  "main": "dist/vue2-froala.umd.js",
+  "unpkg": "dist/vue2-froala.umd.js",
+  "module": "dist/vue2-froala.mjs",
+  "files": [
+    "src",
+    "dist",
+    "LICENSE"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -26,8 +54,5 @@
     "vite": "^5.4.8",
     "vue": "2.7.16"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "packageManager": "pnpm@8.12.1+sha512.6705ea1966adb6587053e6cfe6fddc377f81066228daf736c4490012f44f2ff1bf0c713bb8f3145fce0e3ef669c7c15f19a59ac157838951f234c17b81ca655d"
 }
