@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import FroalaEditor from 'froala-editor';
 
-export default Vue.extend({
+const VuePolyfill = Vue.default && Vue.default.extend ? Vue.default : Vue;
+
+export default VuePolyfill.extend({
     name: 'froala',
     props: ['tag', 'value', 'config', 'onManualControllerReady', 'modelValue'],
     emits: ['update:value', 'manual-controller-ready'],
