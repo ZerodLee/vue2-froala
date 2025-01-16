@@ -12,9 +12,7 @@ export default {
   },
 
   render(h) {
-    return h(this.currentTag, [
-      this.$slots.default ? this.$slots.default()[0] : null,
-    ])
+    return h(this.currentTag, [this.$slots.default])
   },
 
   created: function () {
